@@ -19,7 +19,7 @@ public class CityController {
     @RequestMapping("/index")
     public ModelAndView index(){
         City city=cityService.findOne(1l);
-        System.out.println(city.getName());
+        System.out.println(city);
         return new ModelAndView("city/index");
     }
 }

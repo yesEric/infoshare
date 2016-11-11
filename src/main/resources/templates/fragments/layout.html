@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" xmlns:layout="http://www.thymeleaf.org">
+      xmlns:layout="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="pragma" content="no-cache" />
@@ -8,38 +8,85 @@
     <meta http-equiv="Cache-Control" content="no-store"/>
     <meta http-equiv="Expires" content="0" />
     <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">Info Share</title>
-    <link th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}"/>
-    <link th:href="@{/bower_components/bootstrap/dist/css/bootstrap-theme.min.css}"/>
-    <script type="text/javascript" th:src="@{/bower_components/bootstrap/dist/js/bootstrap.min.js}"/>
+    <link rel="stylesheet" th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/bower_components/bootstrap/dist/css/bootstrap-theme.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/custom.css}"/>
     <script type="text/javascript" th:src="@{/bower_components/jquery/dist/jquery.min.js}"/>
+    <script type="text/javascript" th:src="@{/bower_components/bootstrap/dist/js/bootstrap.min.js}"/>
+
 </head>
 <body>
-<div class="headerBox">
-    <div class="topBox">
-        <div class="topLogo f-left">
-            <a href="#"><img th:src="@{/images/logo.png}"/></a>
+
+<!-- Fixed navbar -->
+<nav class="navbar  navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <img th:src="@{/images/dd128.png}" class="navbar-logo"/>
+
+            <a class="navbar-brand" href="#">
+
+                <span class="navbar-head">这是一很长的标题</span></a>
         </div>
-        <div class="new-nav">
-            <h3>电影频道</h3>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html" >概况</a></li>
+                <li><a href="store/store_summary.html"   > 店铺</a></li>
+                <li><a href="product.html" class="active"> 商品</a></li>
+                <li><a href="order.html"  >订单</a></li>
+                <li><a href="data.html" >数据</a></li>
+                <li><a href="assets.html" >资产</a></li>
+                <li><a href="marketing.html">营销</a></li>
+                <li><a href="setting.html" >设置</a></li>
+                <li><a href="#contact"></a></li>
+                <li><a href="#contact"></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">账户名 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">账户设置</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">退出</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="container content">
+    <div class="row">
+        <div class="col-sm-2 sidebar" >
+            <div class="panel panel-default">
+                <div class="panel-heading">列表</div>
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation" class="active"><a href="#">商品库</a></li>
+                        <li role="presentation"><a href="#">商品分组</a></li>
+                        <li role="presentation"><a href="#">页面模板</a></li>
+                        <li role="presentation"><a href="#">商品导入</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10  main">
+
+
+            <div class="panel panel-default " style=" border-radius: 0px !important;border-collapse: collapse !important;">
+                <div class="panel-heading">店铺</div>
+                <div class="panel-body">
+                    <div layout:fragment="content"></div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </div>
-<div class="locationLine" layout:fragment="prompt">
-    当前位置：首页 &gt; <em>页面</em>
-</div>
-<table class="globalMainBox" style="position:relative;z-index:1">
-    <tr>
-        <td class="columnLeftBox" valign="top">
-            <div th:replace="fragments/nav :: nav"></div>
-        </td>
-        <td class="whiteSpace"></td>
-        <td class="rightColumnBox" valign="top">
-            <div layout:fragment="content"></div>
-        </td>
-    </tr>
-</table>
 
-<div class="footBox" th:replace="fragments/footer :: footer"></div>
+
 
 </body>
 </html>
+

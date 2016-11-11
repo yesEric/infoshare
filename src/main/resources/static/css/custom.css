@@ -1,0 +1,193 @@
+.btn{
+    border-radius: 2px !important;
+    min-width: 100px;
+
+}
+span{
+    margin: 10px;
+}
+/*.control-label .form-control{*/
+    /*border-radius: 2px !important;*/
+    /*font-size: 12px;*/
+    /*height: 26px;*/
+/*}*/
+.table-header{
+    background-color: gainsboro;
+
+
+}
+.table{
+    font-size: 12px;
+}
+.row{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+body {
+    background-color: #fff;
+    font-family: "Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif;
+    min-width: 1000px;
+
+
+}
+.col-sm-3{
+    margin: 0px;
+    padding: 0px;
+}
+.sidebar {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 20px;
+    bottom: 0;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+div.container.content{
+    margin-top:55px;
+}
+
+div>ul.box{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:flex;
+    margin-left: -40px;
+
+    /*background-color: #F8F8F8 ;*/
+}
+div>ul.box>li
+ {
+     -webkit-box-flex:1;
+     -webkit-flex:1;
+     -moz-box-flex:1;
+     -ms-flex:1;
+     flex:1;padding:0 5px;
+     list-style: none;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #F8F8F8 ;
+
+ }
+
+div>ul.box>li.item-left{
+    text-align: left;
+    border-right:solid 3px  white;
+}
+div>nav.box>ul>li>a
+{
+    margin-top: 20px;
+    padding-top: 20px;
+
+}
+
+a:link{
+    text-decoration:none;
+}
+a:visited{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:none;
+}
+a:active{
+    text-decoration:none;
+}
+
+.item-tuangou{
+    background-color: #8FCF8F!important;
+    border-right:solid 5px white;
+    min-height: 112px;
+}
+
+.item-jifen{
+    background-color: #84BDD0!important;;
+    border-right:solid 5px white;
+    min-height: 112px;
+}
+
+.item-shouyintai{
+    background-color: #849BD0!important;;
+    border-right:solid 5px white;
+    min-height: 112px;
+}
+
+.item-zhekou{
+    background-color: #A984D0!important;;
+    border-right:solid 5px white;
+    min-height: 112px;
+}
+.panel-title {
+
+
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.panel{
+    border-radius: 0px !important;border-collapse: collapse !important;
+}
+.main {
+
+    left: auto;
+    padding: 0px;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    position: relative;
+
+}
+.navbar-brand {
+    color: #fcf8e3;
+    vertical-align: top;
+
+}
+
+/*.nav > li > a:hover,*/
+.dropdown-menu,
+.nav > li > a.active,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #05A;
+    border-bottom: 2px solid white;
+    margin-bottom: 0px;
+}
+
+
+
+
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover,.navbar{
+
+    background-color: #05A;
+}
+
+
+.nav > li {
+    border: 0px;
+}
+.navbar a {
+    color: white!important;;
+}
+
+
+.navbar-logo {
+
+    margin-left: -210px;
+    margin-top: 10px;
+    width:30px;
+    height: 30px;
+    vertical-align: top;
+}
+
+.navbar-head {
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid #ccc;
+    color: #fff;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
