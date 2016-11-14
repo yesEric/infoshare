@@ -7,7 +7,7 @@
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta http-equiv="Cache-Control" content="no-store"/>
     <meta http-equiv="Expires" content="0" />
-    <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">Info Share</title>
+    <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">西客站信息共享服务平台</title>
     <link rel="stylesheet" th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}"/>
     <link rel="stylesheet" th:href="@{/bower_components/bootstrap/dist/css/bootstrap-theme.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/custom.css}"/>
@@ -29,7 +29,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html" class="active">概况</a></li>
+                <li><a href="/" class="active">概况</a></li>
                 <li><a href="store/store_summary.html" >物业信息管理 </a></li>
                 <li><a href="product.html"> 设施信息管理</a></li>
                 <li><a href="order.html"  >业务信息管理</a></li>
@@ -51,31 +51,8 @@
 </nav>
 <div class="container content">
     <div class="row">
-        <div class="col-sm-2 sidebar" >
-            <div class="panel panel-default">
-                <div class="panel-heading"></div>
-                <div class="panel-body">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li role="presentation" class="active"><a href="#">商品库</a></li>
-                        <li role="presentation"><a href="#">商品分组</a></li>
-                        <li role="presentation"><a href="#">页面模板</a></li>
-                        <li role="presentation"><a href="#">商品导入</a></li>
 
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-10  main">
-
-
-            <div class="panel panel-default " style=" border-radius: 0px !important;border-collapse: collapse !important;">
-                <div class="panel-heading">店铺</div>
-                <div class="panel-body">
-                    <div layout:fragment="content"></div>
-                </div>
-            </div>
-
+        <div class="col-sm-12  main panel panel-default" layout:fragment="content">
 
         </div>
     </div>

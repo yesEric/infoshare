@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Expires" content="0" />
+    <title>登录---西客站信息共享服务平台</title>
+    <link rel="stylesheet" th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/bower_components/bootstrap/dist/css/bootstrap-theme.min.css}"/>
+
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+    <script type="text/javascript" th:src="@{/bower_components/jquery/dist/jquery.min.js}"/>
+    <script type="text/javascript" th:src="@{/bower_components/bootstrap/dist/js/bootstrap.min.js}"/>
+    <style type="text/css">
+        body{color:#000;background:#f5f4f3;font-size:12px;line-height:166.6%;text-align:center;margin:0;padding:0;border:0}
+        body.move{-webkit-transition:padding 0.3s ease;-moz-transition:padding 0.3s ease;-o-transition:padding 0.3s ease;-ms-transition:padding 0.3s ease;transition:padding 0.3s ease;}
+        /* main */
+        .main{height:465px;background:#fff;position: relative;min-width: 1002px;}
+        .main-inner{width:100%;height:465px;position:relative;clear:both;background-repeat:no-repeat;background-position:center top;}
+        .theme{margin:0 auto;height:465px;width:100%;overflow:hidden;position:relative;}
+        .login{ width:400px;height:240px;top:290px;left:50%; margin-left:-200px;text-align:left;position:absolute;z-index:2;}
+        /* footer */
+        #footer{width:100%;text-align:center;padding-top:130px;}
+        .bigger{ font-size:54px;color: #f3f4f5;text-shadow: 0 1px 2px #000;}
+        .normal{font-size:40px;color: #f3f4f5;text-shadow: 0 1px 2px #000;}
+        .copyright{font:normal 14px MSYH;color: #000;}
+        .login-button{font-size: 18px; letter-spacing:8px}
+    </style>
+</head>
+
+<body id ="login" class="move" style="padding-top: 0px;">
+<section class="main" style="background-color: #0079dc;">
+    <div class="main-inner" style="background-image: url(/images/login.png);">
+        <div class="theme" style="padding-top:130px;">
+            <div style="letter-spacing:8px">
+                <span class="bigger">北京西客站</span>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <div style="letter-spacing:4px">
+                <span class="normal">信息共享平台</span>
+            </div>
+        </div>
+        <!--登录框-->
+        <div id="loginBlock" class="login container">
+            <!--<c:if test="${not empty errors}">-->
+                <!--<div class="alert alert-danger alert-dismissable">-->
+                    <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
+                    <!--<c:forEach var="error" items="${errors}">-->
+                        <!--<c:out value="${error}"/><br />-->
+                    <!--</c:forEach>-->
+                <!--</div>-->
+                <!--<c:remove var="errors"/>-->
+            <!--</c:if>-->
+            <form class="form-signin" action="/j_security_check" method="post"  onsubmit="saveUsername(this);return validateForm(this)">
+
+                <input type="text"  name="j_username" id="j_username" maxlength="16" class="input-block-level" placeholder="用户名"  autocomplete="off"/>
+                <input type="password" name="j_password" id="j_password" maxlength="16" class="input-block-level" placeholder="密码" />
+
+
+                <br/>
+                <button type="submit" class="btn btn-primary login-button" style="width:100%;">登录</button>
+            </form>
+        </div>
+    </div>
+</section>
+<footer id="footer" class="footer">
+    <p class="copyright">版权所有©北京西客站</p>
+</footer>
+</body>
+</html>
